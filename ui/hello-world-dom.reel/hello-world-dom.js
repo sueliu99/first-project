@@ -20,6 +20,15 @@ exports.HelloWorldDom = Component.specialize(/** @lends HelloWorldDom# */ {
             var div = document.createElement("Div");
             div.textContent = "Hello, world";
             this.element.appendChild(div);
+            
+            fragment.appendChilrd(div);
+            fragement.appendChild(div.cloneNode(true));
+            fragement.appendChild(div.cloneNode(true));
+            fragement.firstChild.classList.add('HellowWorldDom-left');
+            fragement.firstChild.classList.add('HellowWorldDom-right');
+            this.element.appendChild(fragment);
+            
+                                                
         }
     }
 });

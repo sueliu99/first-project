@@ -13,5 +13,13 @@ exports.HelloWorldDom = Component.specialize(/** @lends HelloWorldDom# */ {
         value: function HelloWorldDom() {
             this.super();
         }
+    },
+    
+    draw: {
+        value: function () {
+            var div = document.createElement("Div");
+            div.textContent = "Hello, world";
+            this.element.appendChild(div);
+        }
     }
 });

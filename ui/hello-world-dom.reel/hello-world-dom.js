@@ -17,15 +17,16 @@ exports.HelloWorldDom = Component.specialize(/** @lends HelloWorldDom# */ {
     
     draw: {
         value: function () {
+            var fragment = document.createDocmentFragment();
             var div = document.createElement("Div");
-            div.textContent = "Hello, world";
+            div.textContent = "Hello, world !";
             this.element.appendChild(div);
             
-            fragment.appendChilrd(div);
-            fragement.appendChild(div.cloneNode(true));
-            fragement.appendChild(div.cloneNode(true));
-            fragement.firstChild.classList.add('HellowWorldDom-left');
-            fragement.firstChild.classList.add('HellowWorldDom-right');
+            fragment.appendChild(div);
+            fragment.appendChild(div.cloneNode(true));
+            fragment.appendChild(div.cloneNode(true));
+            fragment.firstChild.classList.add('HellowWorldDom-left');
+            fragment.firstChild.classList.add('HellowWorldDom-right');
             this.element.appendChild(fragment);
             
                                                 
